@@ -57,6 +57,14 @@
     userEmail = "herppratama@gmail.com";
   };
 
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
+    '';
+  };
+
+
   # You can also manage environment variables but you will have to manually
   # source
   #
