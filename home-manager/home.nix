@@ -21,6 +21,11 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
+    pkgs.fish
+    pkgs.fzf
+    pkgs.gcc
+    pkgs.gnumake
+    pkgs.nodejs
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -57,13 +62,12 @@
     userEmail = "herppratama@gmail.com";
   };
 
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-    '';
-  };
-
+  # programs.fish = {
+  #   enable = true;
+  #   interactiveShellInit = ''
+  #     set fish_greeting # Disable greeting
+  #   '';
+  # };
 
   # You can also manage environment variables but you will have to manually
   # source
