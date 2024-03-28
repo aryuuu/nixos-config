@@ -26,6 +26,10 @@
     pkgs.gcc
     pkgs.gnumake
     pkgs.nodejs
+    pkgs.tmux
+    pkgs.alacritty
+    pkgs.d2coding
+    pkgs.nerdfonts
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -61,6 +65,8 @@
     userName = "aryuuu";
     userEmail = "herppratama@gmail.com";
   };
+
+  fonts.fontconfig.enable = true;
 
   # programs.fish = {
   #   enable = true;
