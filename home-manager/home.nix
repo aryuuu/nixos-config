@@ -17,19 +17,23 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    pkgs.fish
-    pkgs.fzf
-    pkgs.gcc
-    pkgs.gnumake
-    pkgs.nodejs
-    pkgs.tmux
-    pkgs.alacritty
-    pkgs.d2coding
-    pkgs.nerdfonts
+    fish
+    fzf
+    gcc
+    gnumake
+    nodejs
+    tmux
+    alacritty
+    d2coding
+    nerdfonts
+    stow
+    k9s
+    kubectl
+
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -64,6 +68,18 @@
     enable = true;
     userName = "aryuuu";
     userEmail = "herppratama@gmail.com";
+
+    signing = {
+      signByDefault = true;
+      key = ""
+    }
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {};
+
+    xwayland.enable = true;
   };
 
   fonts.fontconfig.enable = true;

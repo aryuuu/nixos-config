@@ -18,7 +18,7 @@ Install home-manager as standalone program
 Clone the repo and go inside the root dir
 
 ```sh
-git@github.com:aryuuu/nixos-config.git && cd nixos-config
+git clone git@github.com:aryuuu/nixos-config.git && cd nixos-config
 ```
 
 Run home-manager
