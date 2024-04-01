@@ -17,7 +17,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -71,16 +71,11 @@
 
     signing = {
       signByDefault = true;
-      key = ""
-    }
+      key = "4DA0E64907CD9E38";
+    };
   };
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    settings = {};
-
-    xwayland.enable = true;
-  };
+  wayland.windowManager.hyprland = import ./hyprland.nix;
 
   fonts.fontconfig.enable = true;
 
